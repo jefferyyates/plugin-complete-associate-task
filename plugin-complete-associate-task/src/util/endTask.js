@@ -14,7 +14,9 @@ class EndTaskUtil {
     const fetchBody = {
       reservationSid,
       taskSid,
-    };
+      Token:
+        Manager.getInstance().store.getState().flex.session.ssoTokenPayload.token,
+   };
 
     const fetchOptions = {
       method: "POST",

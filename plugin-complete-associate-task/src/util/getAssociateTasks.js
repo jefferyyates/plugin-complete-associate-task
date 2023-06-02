@@ -9,9 +9,9 @@ class GetAssociateTask {
     const workerTasks = this.getWorkerTasks(selectedWorkerSid);
     // eslint-disable-next-line no-unused-vars
     workerTasks.forEach(function (value, key) {
-      if (value.status == "wrapping") {
+      //if (value.status == "wrapping") {
         endTaskUtil.startEndTask(value.sid, value.taskSid);
-      }
+      //}
     });
   }
 

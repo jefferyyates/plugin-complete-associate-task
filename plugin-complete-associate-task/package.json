@@ -1,23 +1,24 @@
 {
   "name": "plugin-complete-associate-task",
-  "version": "2.0.0",
+  "version": "0.0.6",
   "private": true,
   "scripts": {
     "postinstall": "flex-plugin pre-script-check"
   },
   "dependencies": {
-    "react": "16.5.2",
-    "react-dom": "16.5.2",
+    "@twilio-paste/core": "^15.3.0",
+    "@twilio-paste/icons": "^9.2.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "react-tooltip": "^4.2.21",
-    "@twilio/flex-plugin-scripts": "5.0.6",
-    "react-emotion": "9.2.12"
+    "@emotion/styled": "^11.1.5",
+    "@twilio/flex-plugin-scripts": "6.0.4"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.16.3",
-    "@twilio/flex-ui": "^1",
+    "@twilio/flex-ui": "2.2.0",
     "eslint": "^8.5.0",
     "eslint-plugin-react": "^7.28.0",
-    "flex-plugin": "^3.13",
-    "react-test-renderer": "16.5.2"
+    "react-test-renderer": "17.0.2"
   }
 }

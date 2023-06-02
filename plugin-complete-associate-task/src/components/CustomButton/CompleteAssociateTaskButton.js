@@ -1,7 +1,8 @@
 import * as React from "react";
-import { withTheme, Button } from "@twilio/flex-ui-core";
+import { withTheme, Button } from "@twilio/flex-ui";
 import { getAssociateTask } from "../../util/getAssociateTasks";
-import styled from "react-emotion";
+import { styled } from "@twilio/flex-ui";
+//import styled from "react-emotion";
 import ReactTooltip from "react-tooltip";
 
 export const CloseTaskButtonContainer = styled("div")`
@@ -31,7 +32,7 @@ class CompleteAssociateTaskButton extends React.PureComponent {
         </Button>
 
         <ReactTooltip id="closeTask" place="top" effect="solid">
-          Close the tasks in wrapping for this agent
+          Close the tasks for this agent
         </ReactTooltip>
       </CloseTaskButtonContainer>
     );
