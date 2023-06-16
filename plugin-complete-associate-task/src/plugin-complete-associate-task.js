@@ -18,7 +18,7 @@ export default class CompleteAssociateTaskPlugin extends FlexPlugin {
    * @param manager { import('@twilio/flex-ui').Manager }
    */
   init(flex) {
-    flex.WorkerCanvas.Content.add(
+    flex.Supervisor.TaskInfoPanel.Content.add(
       <CompleteAssociateTaskButton key="CompleteAssociateTaskButton" />,
       {
         sortOrder: 40,

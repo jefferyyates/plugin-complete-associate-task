@@ -43,7 +43,7 @@ exports.handler = async function (context, event, callback) {
         .reservations
         .list({workerSid: event.WorkerSid, reservationStatus: "accepted"});
 
-      if(resList.lenght == 0) continue;
+      if(resList.length == 0) continue;
 
       let sourceTaskAttributes = JSON.parse(taskList[i].attributes);
       let transferTargetType = "queue";
@@ -80,6 +80,9 @@ exports.handler = async function (context, event, callback) {
           transferTargetType: transferTargetType,
           ignoreWorkerContactUri: "ignoreThisParam"
         };
+
+        // change direction to defeat built-in auto accept in Flex
+        newTaskAttributes.direction = "inbound";
 
         let routingParams = {
           properties: {

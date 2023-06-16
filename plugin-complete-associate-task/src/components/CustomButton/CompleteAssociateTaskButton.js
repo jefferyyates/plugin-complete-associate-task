@@ -11,7 +11,8 @@ export const CloseTaskButtonContainer = styled("div")`
 
 class CompleteAssociateTaskButton extends React.PureComponent {
   handleClick = () => {
-    getAssociateTask.loopTask();
+    //getAssociateTask.loopTask();
+    getAssociateTask.closeThisTask();
   };
 
   //use set state here and when the state change, component became available or disable
@@ -24,15 +25,15 @@ class CompleteAssociateTaskButton extends React.PureComponent {
           onClick={this.handleClick}
           // eslint-disable-next-line react/prop-types
           themeOverride={this.props.theme.WorkerSkills.CancelButton}
-          roundCorners={false}
+          roundCorners={true}
           data-tip
           data-for="closeTask"
         >
-          Close tasks
+          Close task
         </Button>
 
         <ReactTooltip id="closeTask" place="top" effect="solid">
-          Close the tasks for this agent
+          Close this task for this agent
         </ReactTooltip>
       </CloseTaskButtonContainer>
     );
